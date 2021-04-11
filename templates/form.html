@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Insurance Lead Prediction </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form_style.css') }}"
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   
+<body>
+
+  <div class="Predict">
+    <h1> Insurance Lead Prediction </h1>
+    
+       <form action = "{{url_for('predict')}}" method = "POST">
+          <lable for="Upper_Age">Upper Age </lable>
+          <input type = "text" name = "Upper_age" placeholder="Enter Upper age">
+          
+          <br><br>
+          
+          <lable for="Lower_Age">Upper Age </lable>
+          <input type = "text" name = "Lower_age" placeholder="Enter Lower age">
+          
+          <br><br>
+          
+          <lable for="Health_Indicator">Health Indicator</lable>
+          <select name="Health_Indicator">
+          <option value="1">X1</option>
+          <option value="2">X2</option>
+          <option value="3">X3</option>
+          <option value="4">X4</option>
+          <option value="5">X5</option>
+          <option value="6">X6</option>
+          <option value="7">X7</option>
+          <option value="8">X8</option>
+          <option value="9">X9</option>
+          </select>
+          
+          <br><br>
+          
+          <lable for="Holding_Policy_Duration">Policy Holding Duration</lable>
+          <select name="Holding_Policy_Duration">
+          <option value="1">1 year</option>
+          <option value="2">2 years</option>
+          <option value="3">3 years</option>
+          <option value="4">4 years</option>
+          <option value="5">5 years</option>
+          <option value="6">6 years</option>
+          <option value="7">7 years</option>
+          <option value="8">8 years</option>
+          <option value="9">9 years</option>
+          <option value="10">10 years</option>
+          <option value="11">11 years</option>
+          <option value="12">12 years</option>
+          <option value="13">13 years</option>
+          <option value="14">14 years+</option> 
+          </select>
+          
+          <br><br>
+          
+          <lable for="Holding_Policy_Type">Type of Policy</lable>
+          <select name="Holding_Policy_Type">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          </select>
+          
+          <br><br> 
+          
+          <lable for="Reco_Policy_Cat">Policy Category</lable>
+          <select name="Reco_Policy_Cat">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          </select>
+          
+          <br><br>
+          
+          <lable for="Accomodation_Type">Accomodation Type</lable>
+          <select name="Accomodation_Type">
+          <option value="0">Owned</option>
+          <option value="1">Rented</option>
+          </select>
+          
+          <br><br>
+          
+          <lable for="Reco_Insurance_Type">Insurance Type</lable>
+          <select name="Reco_Insurance_Type">
+          <option value="0">Individual</option>
+          <option value="1">Joint</option>
+          </select>
+          
+          <br><br>
+          
+          <lable for="Is_Spouse">You have spouse?</lable>
+          <select name="Is_Spouse">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+          </select>
+          
+          <br><br>
+          <lable for="Holding_Policy_Premium"> Policy premium</lable>
+          <input type = "text" name = "Holding_Policy_Premium" placeholder="Enter policy premium">
+          
+          <br><br>
+
+          <button type="submit" class = "btn btn-primary btn-block btn-large"> Predict  </button>
+     
+    </form>
+    
+    <br>
+    <br>
+    
+    {{prediction_text}}
+
+
+</div>   
+
+</body>
+</html>
+
+ 
